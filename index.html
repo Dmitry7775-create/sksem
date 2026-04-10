@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стратегическая упаковка бизнеса для СК СЭМ | Апрель 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#0a0c10;--bg2:#0d1017;--bg3:#141820;
+--gold:#c8a44e;--gold-l:#e4c76b;--gold-d:rgba(200,164,78,0.12);
+--txt:#e8e4dc;--txt2:#b8b2a8;--txt3:#8a8680;
+--red:#c0392b;--red-d:rgba(192,57,43,0.10);
+--grn:#27ae60;--grn-d:rgba(39,174,96,0.10);
+--orn:#e67e22;--orn-d:rgba(230,126,34,0.10);
+--ff1:'Playfair Display',Georgia,serif;
+--ff2:'Onest',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory;overflow-y:scroll;}
+body{font-family:var(--ff2);background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;}
+
+.s{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:60px 80px;position:relative;overflow:hidden;}
+.s::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 30%,rgba(200,164,78,0.03) 0%,transparent 60%);pointer-events:none;}
+@media(max-width:900px){.s{padding:40px 20px;}}
+
+.sn{position:absolute;top:36px;right:56px;font-family:var(--ff1);font-size:14px;color:var(--gold);letter-spacing:3px;opacity:.5;}
+@media(max-width:900px){.sn{top:16px;right:20px;font-size:12px;}}
+
+h1{font-family:var(--ff1);font-weight:800;font-size:clamp(2.6rem,5.2vw,4.4rem);line-height:1.08;letter-spacing:-.02em;}
+.gl{color:var(--gold);}
+h2{font-family:var(--ff1);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.8rem);line-height:1.18;}
+h3{font-family:var(--ff1);font-weight:600;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.28;color:var(--txt);}
+p,li{font-size:clamp(1.0rem,1.5vw,1.15rem);line-height:1.72;color:var(--txt2);}
+.ld{font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.6;color:var(--txt);font-weight:300;}
+.lb{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;display:block;}
+.dv{width:56px;height:2px;background:var(--gold);margin:20px 0;}
+.mt{margin-top:32px;}.mt2{margin-top:20px;}.mb{margin-bottom:16px;}
+
+.cover{background:linear-gradient(135deg,#0a0c10,#12161e 50%,#0d1017);text-align:left;justify-content:flex-end;padding-bottom:90px;}
+.cover::after{content:'';position:absolute;top:-30%;right:-15%;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,rgba(200,164,78,0.05),transparent 65%);pointer-events:none;}
+.cover .sub{font-weight:300;font-size:clamp(1.15rem,2vw,1.5rem);color:var(--txt2);margin-top:18px;max-width:660px;}
+.cover .meta{margin-top:28px;font-size:.88rem;color:var(--txt3);letter-spacing:.5px;}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:36px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;}
+@media(max-width:900px){.g2,.g3{grid-template-columns:1fr;}}
+
+.c{background:var(--bg3);border:1px solid rgba(200,164,78,.08);border-radius:12px;padding:28px;position:relative;}
+.c--r{border-color:rgba(192,57,43,.2);background:linear-gradient(135deg,var(--bg3),rgba(192,57,43,.04));}
+.c--g{border-color:rgba(39,174,96,.2);background:linear-gradient(135deg,var(--bg3),rgba(39,174,96,.04));}
+.c--a{border-color:rgba(200,164,78,.25);background:linear-gradient(135deg,var(--bg3),rgba(200,164,78,.05));}
+.c--o{border-color:rgba(230,126,34,.25);background:linear-gradient(135deg,var(--bg3),rgba(230,126,34,.05));}
+.c h3{margin-bottom:8px;}.c p{font-size:.96rem;}
+.ic{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px;}
+.ic--r{background:var(--red-d);}.ic--g{background:var(--grn-d);}.ic--a{background:var(--gold-d);}.ic--o{background:var(--orn-d);}
+
+.q{border-left:3px solid var(--gold);padding:20px 28px;margin:28px 0;background:var(--gold-d);border-radius:0 8px 8px 0;}
+.q p{font-family:var(--ff1);font-size:clamp(1.1rem,1.7vw,1.35rem);font-style:italic;color:var(--txt);line-height:1.45;}
+.q--r{border-left-color:var(--red);background:var(--red-d);}
+.q--o{border-left-color:var(--orn);background:var(--orn-d);}
+
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:36px;border-radius:12px;overflow:hidden;}
+@media(max-width:900px){.cmp{grid-template-columns:1fr;}}
+.cmp-l,.cmp-r{padding:36px;}
+.cmp-l{background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.12);}
+.cmp-r{background:rgba(200,164,78,.06);border:1px solid rgba(200,164,78,.15);}
+.cmp-l h3,.cmp-r h3{margin-bottom:16px;}
+.cmp ul{list-style:none;padding:0;}
+.cmp ul li{padding:7px 0 7px 22px;position:relative;font-size:.96rem;}
+.cmp-l ul li::before{content:'✕';position:absolute;left:0;color:var(--red);font-weight:700;}
+.cmp-r ul li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700;}
+
+.sr{display:flex;gap:48px;margin-top:36px;flex-wrap:wrap;}
+.st .n{font-family:var(--ff1);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:800;color:var(--gold);line-height:1;}
+.st .t{font-size:.86rem;color:var(--txt3);margin-top:4px;}
+
+.steps{counter-reset:step;margin-top:32px;}
+.step{display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px solid rgba(200,164,78,.06);}
+.step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:var(--ff1);font-size:1.6rem;font-weight:800;color:var(--gold);min-width:40px;line-height:1.1;}
+.step h3{margin-bottom:4px;}
+
+.tl{margin-top:32px;position:relative;padding-left:28px;}
+.tl::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),rgba(200,164,78,.1));}
+.tl-item{position:relative;padding:14px 0 14px 20px;}
+.tl-item::before{content:'';position:absolute;left:-24px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:3px solid var(--bg);}
+.tl-item h3{margin-bottom:4px;}
+
+.bn{font-family:var(--ff1);font-weight:900;font-size:clamp(4rem,10vw,8rem);color:var(--gold);opacity:.10;position:absolute;right:60px;bottom:40px;line-height:1;}
+@media(max-width:900px){.bn{font-size:4rem;right:20px;bottom:20px;}}
+
+.cta-slide{background:linear-gradient(135deg,#12161e,#1a1510 60%,#0d1017);text-align:center;align-items:center;}
+.cta-btn{display:inline-block;margin-top:32px;padding:20px 52px;background:var(--gold);color:#0a0c10;font-family:var(--ff2);font-weight:700;font-size:1.1rem;border-radius:8px;text-decoration:none;letter-spacing:.5px;transition:all .3s;cursor:pointer;}
+.cta-btn:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 8px 32px rgba(200,164,78,.25);}
+
+.split{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start;margin-top:32px;}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:24px;}}
+
+.pb{height:6px;background:rgba(200,164,78,.1);border-radius:3px;margin-top:8px;overflow:hidden;}
+.pb-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold-l));}
+.pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:.74rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;}
+.pill--r{background:var(--red-d);color:var(--red);}
+.pill--g{background:var(--grn-d);color:var(--grn);}
+.pill--a{background:var(--gold-d);color:var(--gold);}
+.pill--o{background:var(--orn-d);color:var(--orn);}
+
+.nav{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:6px;}
+.nav a{width:8px;height:8px;border-radius:50%;background:rgba(200,164,78,.2);display:block;transition:all .3s;}
+.nav a:hover,.nav a.active{background:var(--gold);transform:scale(1.4);}
+@media(max-width:900px){.nav{display:none;}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.s>*:not(.sn):not(.bn){animation:fadeUp .7s ease both;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.tag{padding:6px 14px;border-radius:6px;font-size:.78rem;font-weight:500;background:var(--bg3);border:1px solid rgba(200,164,78,.12);color:var(--txt2);}
+.tag--gold{border-color:rgba(200,164,78,.3);color:var(--gold);}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"></nav>
+
+<!-- ===== 01: ОБЛОЖКА ===== -->
+<section class="s cover" id="s1">
+<span class="sn">01 / 15</span>
+<span class="lb">Конфиденциально &bull; Подготовлено для руководства СК &laquo;СЭМ&raquo; &bull; Апрель 2026</span>
+<h1>2026 год станет переломным<br>для строительного рынка.<br><span class="gl">Выживут только гибкие.</span></h1>
+<p class="sub">Стратегический разбор маркетинговой упаковки вашего бизнеса и конкретный план действий. На основе анализа сайтов sksem.ru и сэм-инвест.рф</p>
+<p class="meta">Полный Цикл Упаковки Бизнеса &bull; 9 этапов от понимания рынка до готовой системы продаж</p>
+</section>
+
+<!-- ===== 02: РЫНОК 2026 ===== -->
+<section class="s" id="s2">
+<span class="sn">02 / 15</span>
+<span class="bn">01</span>
+<span class="lb">Этап 1 &bull; Рентген Рынка &bull; Апрель 2026</span>
+<h2>Строительный рынок России:<br>что происходит <span class="gl">прямо сейчас</span></h2>
+<div class="dv"></div>
+<p class="ld">2026 год эксперты называют &laquo;самым трудным для строительной отрасли&raquo;. Это не прогноз. Это уже реальность.</p>
+
+<div class="g3">
+  <div class="c c--r">
+    <div class="ic ic--r">&#9888;</div>
+    <h3>Обеспеченность контрактами: 0,9 мес.</h3>
+    <p>В январе 2026 года этот показатель упал до исторического минимума по данным Росстата. Подрядчики остаются без заказов.</p>
+  </div>
+  <div class="c c--r">
+    <div class="ic ic--r">&#128200;</div>
+    <h3>Резкое сокращение новых проектов</h3>
+    <p>Крупнейшие девелоперы снижают ввод. Волна спроса 2024 года сошла на нет. Часть подрядчиков не выдержит новых правил игры.</p>
+  </div>
+  <div class="c c--r">
+    <div class="ic ic--r">&#128176;</div>
+    <h3>Рост себестоимости при падении спроса</h3>
+    <p>НДС вырос до 22%. Маркировка стройматериалов. Кадровый дефицит до 789 тыс. специалистов к 2030. Цены растут, клиентов меньше.</p>
+  </div>
+</div>
+
+<div class="q q--r mt">
+  <p>&laquo;2026 год рынок встретит на минимальной базе, без задела на рост. Часть подрядчиков и ИП просто не выдержит новых правил игры&raquo; (Журнал Стратегия, ноябрь 2025)</p>
+</div>
+</section>
+
+<!-- ===== 03: ПОЧЕМУ НУЖНО МЕНЯТЬ СЕЙЧАС ===== -->
+<section class="s" id="s3">
+<span class="sn">03 / 15</span>
+<span class="lb">Ключевой вопрос &bull; Почему нельзя оставить всё как есть</span>
+<h2>В кризис побеждает тот,<br>кого <span class="gl">выбирают не по цене</span></h2>
+<div class="dv"></div>
+
+<div class="split">
+  <div>
+    <h3 style="color:var(--red);">Что происходит, если ничего не менять</h3>
+    <p class="mt2">Когда рынок сужается, клиентов становится меньше. Каждый клиент начинает сравнивать жёстче. И если ваше предложение звучит так же, как у десятков конкурентов, вас выбирают только по одному критерию: <strong>цена</strong>.</p>
+    <p class="mt2">Это гонка на дно. Маржа падает. Лучшие сотрудники уходят. Проекты становятся убыточными.</p>
+    <p class="mt2">В 2026 году средняя загрузка строительных компаний составляет всего 49%. Только 13% подрядчиков загружены более чем на 75%.</p>
+  </div>
+  <div>
+    <h3 style="color:var(--grn);">Что происходит, если перестроиться</h3>
+    <p class="mt2">Компании, которые умеют объяснить свою ценность на языке клиента, <strong>не конкурируют ценой</strong>. Они конкурируют смыслом.</p>
+    <p class="mt2">Когда рынок сжимается, выигрывают те, кого клиент запоминает. Те, кто отвечает на вопрос &laquo;почему вы?&raquo; за 10 секунд. Те, кто превращает первый контакт в доверие.</p>
+    <p class="mt2" style="color:var(--gold);font-weight:600;">Кризис не убивает сильных. Он убирает тех, кто не смог объяснить, чем они отличаются.</p>
+  </div>
+</div>
+</section>
+
+<!-- ===== 04: ЭМОЦИОНАЛЬНЫЙ КОМПАС ===== -->
+<section class="s" id="s4">
+<span class="sn">04 / 15</span>
+<span class="bn">02</span>
+<span class="lb">Этап 2 &bull; Эмоциональный Компас</span>
+<h2>Что чувствует ваш клиент<br>в момент выбора подрядчика</h2>
+<div class="dv"></div>
+<div class="split">
+  <div>
+    <h3 style="color:var(--red);">Текущее состояние: тревога &times; 8/10</h3>
+    <p class="mt2">&laquo;Я вкладываю деньги, которые нельзя вернуть, в процесс, который не могу контролировать, с людьми, которым не могу доверять на 100%.&raquo;</p>
+    <p class="mt2">Бригады часто не соответствуют заявленным компетенциям. Ошибки в инженерных системах ведут к дорогостоящим проблемам. Заказчик это знает по опыту.</p>
+    <div class="pb mt2"><div class="pb-fill" style="width:80%;background:linear-gradient(90deg,var(--red),#e74c3c);"></div></div>
+    <p style="font-size:.8rem;color:var(--txt3);margin-top:4px;">Интенсивность боли: 8 из 10</p>
+  </div>
+  <div>
+    <h3 style="color:var(--grn);">Желаемое состояние: осознанная уверенность</h3>
+    <p class="mt2">&laquo;Я вижу каждый этап. Я могу проверить каждую цифру. Я знаю точную стоимость до начала работ. Мне не нужно гадать.&raquo;</p>
+    <p class="mt2">Между этими двумя состояниями можно спроектировать 6 конкретных шагов. И встроить каждый шаг в ваш маркетинг, сайт, скрипты и рекламу.</p>
+    <div class="pb mt2"><div class="pb-fill" style="width:95%;"></div></div>
+    <p style="font-size:.8rem;color:var(--txt3);margin-top:4px;">Готовность платить за это: 9.5 из 10</p>
+  </div>
+</div>
+</section>
+
+<!-- ===== 05: ДИАГНОСТИКА САЙТА ===== -->
+<section class="s" id="s5">
+<span class="sn">05 / 15</span>
+<span class="lb">Диагностика &bull; Что мы увидели на ваших сайтах</span>
+<h2>СК &laquo;СЭМ&raquo;: <span class="gl">сильная компания</span><br>со слабой упаковкой</h2>
+<div class="dv"></div>
+<p class="ld">У вас есть всё: 15+ лет опыта, 200+ проектов, 25&nbsp;000 м&sup2;, 90% сдачи раньше срока, партнёры (Лемана Про, ЖБИ 65, Топ Гео). Но сайт этого <strong>не доносит</strong>.</p>
+
+<div class="cmp mt">
+  <div class="cmp-l">
+    <h3 style="color:var(--red);">Что видит клиент сейчас</h3>
+    <ul>
+      <li>&laquo;Качество, сроки, под ключ&raquo;: это пишут все 100% конкурентов</li>
+      <li>&laquo;Наше вдохновение: стремление к совершенству&raquo;: красиво, но не продаёт</li>
+      <li>Кейсы: перечень параметров без истории и эмоции</li>
+      <li>6 причин выбрать: стандартный набор, не цепляет</li>
+      <li>Два сайта с разным стилем и разным позиционированием</li>
+      <li>Портфолио на sksem.ru загружается пустым</li>
+      <li>Нет единого ответа на &laquo;почему вы, а не другие?&raquo;</li>
+    </ul>
+  </div>
+  <div class="cmp-r">
+    <h3 style="color:var(--gold);">Что должен видеть клиент</h3>
+    <ul>
+      <li>Уникальный метод с собственным именем и идеологией</li>
+      <li>Один неопровержимый аргумент: &laquo;почему СЭМ&raquo;</li>
+      <li>Кейсы как истории трансформации: задача &rarr; решение &rarr; результат</li>
+      <li>Система доказательств вместо списка преимуществ</li>
+      <li>Единая когерентная стратегия на всех каналах</li>
+      <li>Один мощный сайт с чёткой воронкой</li>
+      <li>Живое портфолио с фото, цифрами и отзывами клиентов</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ===== 06: ГДЕ ИМЕННО НУЖНЫ ИЗМЕНЕНИЯ ===== -->
+<section class="s" id="s6">
+<span class="sn">06 / 15</span>
+<span class="lb">Карта изменений &bull; Где применять новую упаковку</span>
+<h2>Где конкретно применяется<br><span class="gl">новое позиционирование</span></h2>
+<div class="dv"></div>
+<p class="ld">Позиционирование не живёт &laquo;на бумаге&raquo;. Оно работает только когда пронизывает каждую точку контакта с клиентом. Вот конкретная карта:</p>
+
+<div class="g3">
+  <div class="c c--o">
+    <div class="ic ic--o">&#127760;</div>
+    <h3>Сайт sksem.ru</h3>
+    <p><strong>Что менять:</strong> главный экран, тексты услуг, портфолио, блок &laquo;О компании&raquo;, форму захвата.</p>
+    <p class="mt2"><strong>Почему:</strong> сейчас сайт не отвечает на вопрос &laquo;почему вы?&raquo;. Клиент уходит через 8 секунд. Нужна новая структура с воронкой.</p>
+  </div>
+  <div class="c c--o">
+    <div class="ic ic--o">&#128222;</div>
+    <h3>Скрипты звонков</h3>
+    <p><strong>Что менять:</strong> первая фраза менеджера, логика разговора, работа с возражениями.</p>
+    <p class="mt2"><strong>Почему:</strong> менеджер говорит &laquo;мы строим под ключ&raquo;. Клиент слышит это десятый раз за день. Нужен один точный аргумент.</p>
+  </div>
+  <div class="c c--o">
+    <div class="ic ic--o">&#128241;</div>
+    <h3>Мессенджеры и WhatsApp</h3>
+    <p><strong>Что менять:</strong> шаблоны сообщений после первого контакта, цепочки дожима.</p>
+    <p class="mt2"><strong>Почему:</strong> 80% клиентов &laquo;уходят думать&raquo;. Готовая цепочка сообщений возвращает их без давления.</p>
+  </div>
+  <div class="c c--o">
+    <div class="ic ic--o">&#128196;</div>
+    <h3>Коммерческие предложения</h3>
+    <p><strong>Что менять:</strong> структура КП, логика подачи, визуальная упаковка.</p>
+    <p class="mt2"><strong>Почему:</strong> стандартное КП &laquo;как у всех&raquo; не выделяет вас. Нужен документ, который продаёт без менеджера.</p>
+  </div>
+  <div class="c c--o">
+    <div class="ic ic--o">&#128227;</div>
+    <h3>Реклама и объявления</h3>
+    <p><strong>Что менять:</strong> заголовки, тексты объявлений, оффер в рекламе.</p>
+    <p class="mt2"><strong>Почему:</strong> &laquo;Строительство под ключ от 20 000 руб/м&sup2;&raquo; не цепляет. Нужны хуки, построенные на боли клиента.</p>
+  </div>
+  <div class="c c--o">
+    <div class="ic ic--o">&#128101;</div>
+    <h3>Тендеры и госзаказы</h3>
+    <p><strong>Что улучшить:</strong> подача презентаций, сопроводительные материалы, обоснование ценности.</p>
+    <p class="mt2"><strong>Почему:</strong> при прочих равных выигрывает тот, кто лучше объяснил свою ценность на бумаге.</p>
+  </div>
+</div>
+</section>
+
+<!-- ===== 07: ФОРМУЛА УНИКАЛЬНОСТИ ===== -->
+<section class="s" id="s7">
+<span class="sn">07 / 15</span>
+<span class="bn">03</span>
+<span class="lb">Этап 3 &bull; Формула Уникальности</span>
+<h2>Идея, которая делает сравнение<br><span class="gl">невозможным</span></h2>
+<div class="dv"></div>
+
+<div class="g2">
+  <div>
+    <span class="pill pill--r mb">Почему нельзя оставить как есть</span>
+    <p class="mt2">Сейчас СК &laquo;СЭМ&raquo; = &laquo;строительная компания, 15 лет, под ключ&raquo;. Это описание подходит сотням компаний. В кризис 2026 клиент выбирает из 5-7 подрядчиков. Если все звучат одинаково, он выберет самого дешёвого.</p>
+    <p class="mt2">У вас уже есть видеоконтроль. Фиксированная цена. Фотоотчёты. Гарантия. Но это разрозненные факты. Они не объединены в систему.</p>
+  </div>
+  <div class="c c--a">
+    <span class="pill pill--a mb">Гипотеза: новое позиционирование</span>
+    <h3>&laquo;Метод Прозрачной Стройки&raquo;</h3>
+    <p class="mt2">Единственная компания, которая ещё до подписания договора даёт клиенту полную финансовую модель, детальный график и видеодоступ к объекту. И говорит: <strong>&laquo;Проверьте сами&raquo;</strong>.</p>
+    <p class="mt2">Это не новая функция. Это новая философия. Всё, что вы уже делаете, собирается в одну идею с именем, историей и идеологией.</p>
+    <p class="mt2" style="color:var(--gold);font-weight:600;">Новая категория: &laquo;Строительство с открытым доступом&raquo;</p>
+  </div>
+</div>
+</section>
+
+<!-- ===== 08: МАСТЕР-КЛЮЧ ===== -->
+<section class="s" id="s8">
+<span class="sn">08 / 15</span>
+<span class="bn">04</span>
+<span class="lb">Этап 4 &bull; Мастер-Ключ Убеждения</span>
+<h2>Один аргумент, который убирает<br><span class="gl">все возражения</span> разом</h2>
+<div class="dv"></div>
+
+<div class="q">
+  <p>&laquo;Пока подрядчик даёт вам обещания вместо доказательств, уверенность невозможна&raquo;</p>
+</div>
+
+<p class="ld">Когда клиент принимает этот тезис, все типовые возражения рушатся:</p>
+
+<div class="g2 mt">
+  <div class="c">
+    <h3 style="color:var(--red);">&laquo;У вас дороже&raquo;</h3>
+    <div class="dv"></div>
+    <p>&laquo;Да, потому что в стоимость включена полная финансовая модель и система контроля. У тех, кто "дешевле", включены только обещания. Сколько стоят обещания?&raquo;</p>
+  </div>
+  <div class="c">
+    <h3 style="color:var(--red);">&laquo;Надо подумать&raquo;</h3>
+    <div class="dv"></div>
+    <p>&laquo;Конечно. Но подумать на основании чего? Мы можем прямо сейчас показать расчёт, график и методику. Чтобы вы думали не "доверять или нет", а "когда начинаем".&raquo;</p>
+  </div>
+</div>
+
+<div class="tag-row mt">
+  <span class="tag tag--gold">Встраивается в: сайт</span>
+  <span class="tag tag--gold">скрипты звонков</span>
+  <span class="tag tag--gold">объявления</span>
+  <span class="tag tag--gold">КП</span>
+  <span class="tag tag--gold">email-цепочки</span>
+  <span class="tag tag--gold">презентации</span>
+</div>
+</section>
+
+<!-- ===== 09: ОФФЕР ===== -->
+<section class="s" id="s9">
+<span class="sn">09 / 15</span>
+<span class="bn">05</span>
+<span class="lb">Этап 5 &bull; Архитектура Предложения</span>
+<h2>Оффер, от которого <span class="gl">сложно<br>отказаться</span></h2>
+<div class="dv"></div>
+
+<div class="g2">
+  <div>
+    <span class="pill pill--r mb">Сейчас на сайте</span>
+    <h3>&laquo;Получить консультацию&raquo;</h3>
+    <p class="mt2">Это слабый призыв. Консультация = неизвестность. Клиент не знает, что получит, и не хочет тратить время.</p>
+    <p class="mt2"><strong>Почему нужно менять:</strong> в 2026 году каждый лид на вес золота. Слабый оффер = потерянные заявки = потерянные деньги.</p>
+  </div>
+  <div class="c c--a">
+    <span class="pill pill--a mb">Гипотеза: новый оффер</span>
+    <h3>&laquo;Бесплатная финансовая модель вашего объекта за 3 рабочих дня&raquo;</h3>
+    <p class="mt2">&rarr; Детальная смета с фиксированными ценами<br>&rarr; Календарный план по неделям<br>&rarr; Расчёт экономии за счёт оптимизации проекта</p>
+    <p class="mt2" style="color:var(--gold);">Клиент получает ценность ещё до оплаты. Отказ выглядит нелогично.</p>
+  </div>
+</div>
+
+<div class="sr mt">
+  <div class="st"><div class="n">20&times;</div><div class="t">Воспринимаемая ценность<br>относительно стоимости</div></div>
+  <div class="st"><div class="n">0 &#8381;</div><div class="t">Порог входа<br>для клиента</div></div>
+  <div class="st"><div class="n">3 дня</div><div class="t">Срок получения<br>результата</div></div>
+</div>
+</section>
+
+<!-- ===== 10: УПАКОВКА ЦЕННОСТИ ===== -->
+<section class="s" id="s10">
+<span class="sn">10 / 15</span>
+<span class="bn">06</span>
+<span class="lb">Этап 6 &bull; Упаковка Ценности</span>
+<h2>Как сухие факты превращаются<br>в <span class="gl">желания</span> клиента</h2>
+<div class="dv"></div>
+
+<div class="g2 mt">
+  <div class="c c--r">
+    <span class="pill pill--r mb">Сейчас на сайте</span>
+    <h3>&laquo;Видеоконтроль стройки на всех этапах&raquo;</h3>
+    <p class="mt2">Камеры и фотоотчёты доступны круглосуточно. Вы контролируете объект даже на расстоянии.</p>
+    <p class="mt2" style="color:var(--txt3);">Клиент думает: &laquo;Ну ок, камеры. И что?&raquo;</p>
+  </div>
+  <div class="c c--g">
+    <span class="pill pill--g mb">После упаковки</span>
+    <h3>&laquo;Протокол Полной Видимости&raquo;</h3>
+    <p class="mt2"><strong>Практика:</strong> Открываете телефон, за 10 секунд видите, что прямо сейчас происходит на вашем объекте.</p>
+    <p class="mt2"><strong>Эмоция:</strong> Впервые за весь проект вы чувствуете спокойствие. Не &laquo;надеюсь, всё нормально&raquo;, а &laquo;я вижу, что всё нормально&raquo;.</p>
+    <p class="mt2"><strong>Идентичность:</strong> Вы становитесь заказчиком, который контролирует, а не надеется.</p>
+  </div>
+</div>
+
+<p class="mt">По этой модели мы упаковываем каждую характеристику: фиксированная цена (&laquo;Протокол Железной Сметы&raquo;), собственная команда (&laquo;Штатная Гвардия&raquo;), сдача раньше срока (&laquo;Система Опережения Графика&raquo;). Всего: <strong>49+ формулировок</strong>.</p>
+
+<div class="tag-row mt">
+  <span class="tag tag--gold">Применяется в: сайте</span>
+  <span class="tag tag--gold">КП</span>
+  <span class="tag tag--gold">рекламе</span>
+  <span class="tag tag--gold">соцсетях</span>
+  <span class="tag tag--gold">скриптах</span>
+  <span class="tag tag--gold">тендерной документации</span>
+</div>
+</section>
+
+<!-- ===== 11: ВСЕ 9 ЭТАПОВ ===== -->
+<section class="s" id="s11">
+<span class="sn">11 / 15</span>
+<span class="lb">Полная Система &bull; 9 Этапов</span>
+<h2>Что именно вы получаете<br>на <span class="gl">каждом этапе</span></h2>
+<div class="dv"></div>
+
+<div class="steps">
+  <div class="step"><div><h3>Рентген Рынка</h3><p>Атлас психологии рынка строительства. Почему клиенты ведут себя именно так в 2026 году.</p></div></div>
+  <div class="step"><div><h3>Эмоциональный Компас</h3><p>Паспорт эмоций вашей ЦА + 21 речевой модуль для текстов, звонков, писем.</p></div></div>
+  <div class="step"><div><h3>Формула Уникальности</h3><p>Позиционирование + новая рыночная категория, где вы единственный.</p></div></div>
+  <div class="step"><div><h3>Мастер-Ключ Убеждения</h3><p>Один тезис, уничтожающий все возражения + лестница из 7 ступеней убеждения.</p></div></div>
+  <div class="step"><div><h3>Архитектура Предложения</h3><p>Неотразимый оффер + скрипты для объявлений, звонков, мессенджеров.</p></div></div>
+  <div class="step"><div><h3>Упаковка Ценности</h3><p>49+ формулировок + брендированные названия для каждой услуги.</p></div></div>
+  <div class="step"><div><h3>Магнит Внимания</h3><p>50-80 заголовков и хуков с рейтингом для рекламы и контента.</p></div></div>
+  <div class="step"><div><h3>Конвейер Контента</h3><p>10-15 готовых текстов в убеждающей последовательности для всех каналов.</p></div></div>
+  <div class="step"><div><h3>Аудит Целостности</h3><p>Манифест проекта + стресс-тест + план внедрения по неделям.</p></div></div>
+</div>
+</section>
+
+<!-- ===== 12: ЧТО ЛЕЖИТ НА СТОЛЕ ===== -->
+<section class="s" id="s12">
+<span class="sn">12 / 15</span>
+<span class="lb">Результат &bull; Что вы получаете</span>
+<h2>Не стратегия. Не рекомендации.<br><span class="gl">Готовая система</span>, которую<br>можно включить завтра утром</h2>
+<div class="dv"></div>
+
+<div class="g3">
+  <div class="c c--a"><div class="ic ic--a">&#128203;</div><h3>Концепция позиционирования</h3><p>Одна фраза, которая навсегда отстроит вас от конкурентов</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#127919;</div><h3>Библия убеждения</h3><p>Карта уничтожения всех возражений + лестница убеждений</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#128221;</div><h3>Скрипты продаж</h3><p>Готовые тексты для объявлений, звонков, мессенджеров</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#9998;</div><h3>49+ формулировок</h3><p>Описания ценности для любых маркетинговых материалов</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#128227;</div><h3>50-80 заголовков</h3><p>Хуки для рекламы с рейтингом силы и &laquo;Элитным Отрядом&raquo;</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#128218;</div><h3>10-15 текстов</h3><p>Статьи и посты в убеждающей последовательности</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#127760;</div><h3>Структура сайта + тексты</h3><p>Передаёте разработчику, он верстает по готовому</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#128231;</div><h3>Email-машина</h3><p>10 писем для реактивации базы и дожима</p></div>
+  <div class="c c--a"><div class="ic ic--a">&#128214;</div><h3>Манифест проекта</h3><p>&laquo;Конституция&raquo; маркетинга для всех подрядчиков и сотрудников</p></div>
+</div>
+</section>
+
+<!-- ===== 13: РАЗНИЦА ===== -->
+<section class="s" id="s13">
+<span class="sn">13 / 15</span>
+<span class="lb">Почему это работает</span>
+<h2>Разница между <span class="gl">&laquo;вам нужно&raquo;</span><br>и <span class="gl">&laquo;вот, берите&raquo;</span></h2>
+<div class="dv"></div>
+
+<div class="cmp">
+  <div class="cmp-l">
+    <h3 style="color:var(--red);">Обычный маркетолог</h3>
+    <ul>
+      <li>&laquo;Вам нужно улучшить позиционирование&raquo;</li>
+      <li>&laquo;Рекомендуем доработать оффер&raquo;</li>
+      <li>&laquo;Настройте воронку продаж&raquo;</li>
+      <li>Результат: PDF с рекомендациями, который пылится</li>
+      <li>Вы не знаете, что с этим делать</li>
+    </ul>
+  </div>
+  <div class="cmp-r">
+    <h3>Полный Цикл Упаковки</h3>
+    <ul>
+      <li>&laquo;Вот ваше позиционирование: одна фраза, запомните&raquo;</li>
+      <li>&laquo;Вот оффер: скопируйте в объявление&raquo;</li>
+      <li>&laquo;Вот скрипт звонка: используйте с завтрашнего дня&raquo;</li>
+      <li>&laquo;Вот 80 заголовков: выберите любой&raquo;</li>
+      <li>&laquo;Вот план: первый шаг занимает 30 минут&raquo;</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q mt">
+  <p>Это не маркетинговая консультация. Это инженерный проект. С чертежами, которые можно передать строителю, и он построит.</p>
+</div>
+</section>
+
+<!-- ===== 14: ПЛАН ВНЕДРЕНИЯ ===== -->
+<section class="s" id="s14">
+<span class="sn">14 / 15</span>
+<span class="lb">План действий</span>
+<h2>Конкретные шаги: что, когда<br>и <span class="gl">какой результат</span></h2>
+<div class="dv"></div>
+
+<div class="tl">
+  <div class="tl-item">
+    <h3>Неделя 1-2: Фундамент</h3>
+    <p>Рентген Рынка + Эмоциональный Компас. Полная карта психологии ваших клиентов. Вы понимаете, на каком языке с ними говорить.</p>
+  </div>
+  <div class="tl-item">
+    <h3>Неделя 3-4: Стратегическое ядро</h3>
+    <p>Формула Уникальности + Мастер-Ключ Убеждения. Позиционирование и главный аргумент готовы. Ваши продавцы уже могут использовать это в разговорах.</p>
+  </div>
+  <div class="tl-item">
+    <h3>Неделя 5-6: Боевой арсенал</h3>
+    <p>Архитектура Предложения + Упаковка Ценности. Готовые скрипты, формулировки, новый оффер. Можно менять объявления и тексты на сайте.</p>
+  </div>
+  <div class="tl-item">
+    <h3>Неделя 7-8: Контент и хуки</h3>
+    <p>Магнит Внимания + Конвейер Контента. 80 заголовков + 10-15 готовых текстов. Полная контент-фабрика.</p>
+  </div>
+  <div class="tl-item">
+    <h3>Неделя 9: Финальная сборка</h3>
+    <p>Аудит Целостности. Всё стыкуется, всё проверено, Манифест готов. Пошаговый план: что делать завтра, через неделю, через месяц.</p>
+  </div>
+</div>
+
+<div class="q q--o mt">
+  <p>Если начать сейчас, к июню 2026 у вас будет полностью готовая маркетинговая система. Как раз к началу активного строительного сезона.</p>
+</div>
+</section>
+
+<!-- ===== 15: CTA ===== -->
+<section class="s cta-slide" id="s15">
+<span class="sn">15 / 15</span>
+<span class="lb">Следующий шаг</span>
+<h1 style="max-width:800px;">Одна встреча.<br>Один разбор.<br><span class="gl">Ноль обязательств.</span></h1>
+<div class="dv" style="margin:20px auto;"></div>
+<p class="ld" style="max-width:640px;">60-минутная стратегическая сессия, на которой я покажу конкретные точки роста СК &laquo;СЭМ&raquo;. На основании того, что уже видно в открытых источниках. Бесплатно. Без обязательств.</p>
+<p class="mt2" style="color:var(--txt3);font-size:.96rem;">После сессии вы решаете: работаем дальше или нет.<br>В любом случае вы уйдёте с инсайтами, которые можно применить сразу.</p>
+<a class="cta-btn">Назначить стратегическую сессию</a>
+<p class="mt" style="font-size:.82rem;color:var(--txt3);">Контакт для связи: [ваш email / телефон / Telegram]</p>
+</section>
+
+<script>
+const slides=document.querySelectorAll('.s'),nav=document.getElementById('nav');
+slides.forEach((s,i)=>{const a=document.createElement('a');a.href='#s'+(i+1);a.title='Слайд '+(i+1);nav.appendChild(a);});
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const idx=parseInt(en.target.id.replace('s',''))-1;nav.querySelectorAll('a').forEach((a,i)=>a.classList.toggle('active',i===idx));}});},{threshold:0.5});
+slides.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
